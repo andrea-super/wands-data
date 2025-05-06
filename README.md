@@ -13,15 +13,15 @@ WANDS is a Wayfair product search relevance dataset that is published as a compa
 The dataset allows objective benchmarking and evaluation of search engines on an E-Commerce dataset. Key features of this dataset includes:
 
 1. 42,994 candidate products
-2. 480 queries
-3. 233,448 (query,product) relevance judgements
+2. ~~480 queries~~
+3. ~~233,448 (query,product) relevance judgements~~
 
 Please refer to the paper for more details.
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
+To get a local copy up and running follow the steps below; we used just the `product.csv` dataset, so if you want to make use fo the `query.csv` and `label.csv` files head on over to the Wayfair WANDS repo here: https://github.com/wayfair/WANDS.
+ 
 ### Installation
 
 Clone the repo
@@ -32,7 +32,7 @@ Clone the repo
 
 ## Dataset Details
 
-The data is stored in the ```dataset``` folder in three files:
+The data is stored in the ```dataset``` folder in one file, with the other two being availble in the Wayfair WANDS repo (URL below):
 
 1. ```product.csv``` - Stores all candidate products, columns include:  
    a. product_id - ID of a product  
@@ -45,6 +45,7 @@ The data is stored in the ```dataset``` folder in three files:
    h. average_rating - Average rating the product received  
    i. review_count - Number of user reviews for product  
 
+ Other datasets available here: https://github.com/wayfair/WANDS/tree/main
 2. ```query.csv``` - Stores search queries, columns include:  
    a. query_id - unique ID for each query  
    b. query - query string  
@@ -56,35 +57,21 @@ The data is stored in the ```dataset``` folder in three files:
    c. product_id - ID of the product this annotation applies to  
    d. label - Relevance label, one of 'Exact', 'Partial', or 'Irrelevant'  
 
-### Sample Notebook
 
-We have included a sample notebook ```read_dataset.ipynb``` to show you how you can read the data from the three CSV files easily.
 
 ### Annotation Guidelines
 
-We released [annotation guidelines](Product%20Search%20Relevance%20Annotation%20Guidelines.pdf) as a supplement to the dataset.
+Wayfair includes [annotation guidelines](Product%20Search%20Relevance%20Annotation%20Guidelines.pdf) as a supplement to the dataset.
 
-## Roadmap
-
-See the [open issues](https://github.com/wayfair/WANDS/issues) for a list of proposed features (and known issues).
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. For detailed contributing guidelines, please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
 Distributed under the `MIT` License. See `LICENSE` for more information.
 
-## Contact
-
-For questions or feedback, please reach out to `ecir2022data@gmail.com` or the first author of the referenced paper.
-
-Project Link: [https://github.com/wayfair/WANDS](https://github.com/wayfair/WANDS)
 
 ## Citation
 
-Please cite this paper if you are building on top of or using this dataset:
+Wayfair asks that you please cite this paper if you are building on top of or using this dataset:
 
 ```text
 @InProceedings{wands,  
